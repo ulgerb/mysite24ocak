@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Font Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+   <!-- MDB -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+   <title>Anasayfa</title>
+   <style>
+      .row{
+         width: 100%;
+         margin: 0;
+      }
+      .row>*{
+         padding: 0;
+      }
+      .sidenav{
+         box-shadow: -2px 0px 1px 0px white;
+      }
+      .post img{
+         height: 250px;
+         object-fit: cover;
+      }
+   </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container">
+         <!-- Navbar brand -->
+         <a class="navbar-brand me-2" href="https://mdbgo.com/">
+            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="MDB Logo"
+               loading="lazy" style="margin-top: -1px;" />
+         </a>
+   
+         <!-- Toggle button -->
+         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
+            aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+         </button>
+   
+         <!-- Collapsible wrapper -->
+         <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Dashboard</a>
+               </li>
+            </ul>
+            <!-- Left links -->
+   
+            <div class="d-flex align-items-center">
+               <button type="button" class="btn btn-link px-3 me-2">
+                  Login
+               </button>
+               <button type="button" class="btn btn-primary me-3">
+                  Sign up for free
+               </button>
+               <a class="btn btn-dark px-3" href="https://github.com/mdbootstrap/mdb-ui-kit" role="button"><i
+                     class="fab fa-github"></i></a>
+            </div>
+         </div>
+         <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+   </nav>
+   <!-- Navbar -->
+
+   <main>
+      <section class="carousel-section">
+         <div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape" />
+               </div>
+               <div class="carousel-item">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera" />
+               </div>
+               <div class="carousel-item">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits" />
+               </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+            </button>
+         </div>
+      </section>
+      <div class="row">
+         <div class="col-9 bg-dark px-4">
+            <section class="content1">
+                  <div class="row py-4">
+                     <div class="col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <img class="content1-img" src="" alt="">
+                     </div>
+                  </div>
+            </section>
+            <section class="content2">
+               <div class="d-flex justify-content-between border-2 border-bottom my-3">
+                  <h2 class="text-light">Haftanın En Popüler Postları</h2>
+                  <div class="d-flex g-3">
+                     <div class="btn btn-secondary m-1 px-3 py-2">1</div>
+                     <div class="btn btn-secondary m-1 px-3 py-2">2</div>
+                     <div class="btn btn-secondary m-1 px-3 py-2">4</div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-12">
+                     <div class="card mb-3 post">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="card-img-top" alt="Wild Landscape" />
+                        <div class="card-body">
+                           <h5 class="card-title">Card title</h5>
+                           <p class="card-text">
+                              This is a wider card with supporting text below as a natural lead-in to additional
+                              content. This content is a little bit longer.
+                           </p>
+                           <p class="card-text">
+                              <small class="text-muted">Last updated 3 mins ago</small>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+         <div class="col-3 bg-dark sidenav">
+            <ul class="list-group list-group-light bg-dark">
+               <li class="list-group-item list-group-item-secondary p-3 rounded-0 d-flex justify-content-between align-items-center">
+                  <div>
+                     <div class="fw-bold">John Doe</div>
+                     <div class="text-muted">john.doe@gmail.com</div>
+                  </div>
+                  <span class="badge rounded-pill badge-success">Active</span>
+               </li>
+               <li class="list-group-item list-group-item-secondary p-3 rounded-0 d-flex justify-content-between align-items-center">
+                  <div>
+                     <div class="fw-bold">Alex Ray</div>
+                     <div class="text-muted">alex.ray@gmail.com</div>
+                  </div>
+                  <span class="badge rounded-pill badge-primary">Onboarding</span>
+               </li>
+               <li class="list-group-item list-group-item-secondary p-3 rounded-0 d-flex justify-content-between align-items-center">
+                  <div>
+                     <div class="fw-bold">Kate Hunington</div>
+                     <div class="text-muted">kate.hunington@gmail.com</div>
+                  </div>
+                  <span class="badge rounded-pill badge-warning">Awaiting</span>
+               </li>
+            </ul>
+         </div>
+      </div>
+      
+   </main>
+
+   <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+</body>
+</html>
