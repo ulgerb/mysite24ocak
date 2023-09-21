@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-
+ 
 class Category(models.Model):
    title = models.CharField(("Kategori Başlığı"), max_length=50)
    

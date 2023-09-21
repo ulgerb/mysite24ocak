@@ -23,4 +23,7 @@ from appMy.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', indexPage),
+    path('Kartlar-<grid>', card_listPage),
+    path('Kartlar', card_listPage),
+    path('Haber/<pid>', detailPage),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
