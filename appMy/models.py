@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
  
 class Category(models.Model):
    title = models.CharField(("Kategori Başlığı"), max_length=50)
@@ -22,3 +23,11 @@ class Post(models.Model):
       return self.title
 
 
+class Comment(models.Model):
+   post = models.ForeignKey(Post, verbose_name=("Hangi posta ait"), on_delete=models.CASCADE, null=True)
+   full_name = models.CharField(("Ad Soyad"), max_length=50)
+   text = models.TextField(("Yorum"))
+   date_now = models.DateTimeField(("Tarih - Saat"), auto_now_add=True, null=True)
+
+   def __str__(self) -> str:
+      return self.full_name

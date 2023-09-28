@@ -68,9 +68,17 @@
                <div class="d-flex justify-content-between border-2 border-bottom my-3">
                   <h2 class="text-light">Haftanın En Popüler Postları</h2>
                   <div class="d-flex g-3">
-                     <a href="Kartlar-12" class="btn btn-secondary m-1 px-3 py-2">1</a>
-                     <a href="Kartlar-6" class="btn btn-secondary m-1 px-3 py-2">2</a>
-                     <a href="Kartlar-4" class="btn btn-secondary m-1 px-3 py-2">3</a>
+                     
+                     {% if cate != "all" %}
+                        <a href="/Kartlar-12/{{ cate }}" class="btn btn-secondary m-1 px-3 py-2">1</a>
+                        <a href="/Kartlar-6/{{ cate }}" class="btn btn-secondary m-1 px-3 py-2">2</a>
+                        <a href="/Kartlar-4/{{ cate }}" class="btn btn-secondary m-1 px-3 py-2">3</a>
+                     {% else %}
+                        <a href="/Kartlar-12" class="btn btn-secondary m-1 px-3 py-2">1</a>
+                        <a href="/Kartlar-6" class="btn btn-secondary m-1 px-3 py-2">2</a>
+                        <a href="/Kartlar-4" class="btn btn-secondary m-1 px-3 py-2">3</a>
+                     {% endif %}
+                        
                   </div>
                </div>
                <div class="row">
@@ -101,15 +109,19 @@
                </div>
             </section>
          </div>
+         <!-- Category -->
          <div class="col-3 bg-dark sidenav">
             <ul class="list-group list-group-light bg-dark">
-               <li style="background-color: #555;" class="text-light list-group-item p-3 rounded-0 d-flex justify-content-between align-items-center">
-                  <div>
-                     <div class="fw-bold">John Doe</div>
-                     <div class="text-muted">john.doe@gmail.com</div>
-                  </div>
-                  <span class="badge rounded-pill badge-success">Active</span>
-               </li>
+               
+               {% for i in categorys %}
+                  <li style="background-color: #555;" class="text-light list-group-item p-3 rounded-0 d-flex justify-content-between align-items-center">
+                     <div>
+                        <a href="/Kartlar/{{ i.title }}" class="fw-bold">{{ i.title }}</a>
+                     </div>
+                     <span class="badge rounded-pill badge-success">Active</span>
+                  </li>   
+               {% endfor %}
+                  
                
                
             </ul>
